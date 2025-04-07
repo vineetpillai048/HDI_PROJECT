@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CV_SALES" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Aggregation" application="BAS" cacheInvalidationPeriod="NONE" enforceSqlExecution="true" mdsCubeConversionExecution="AT_LOADING_TIME">
+<descriptions defaultDescription="CV_SALES"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="SALES">
+    <resourceUri>SALES</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews/>
+<logicalModel id="SALES">
+  <attributes>
+    <attribute id="TID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TID"/>
+      <keyMapping columnObjectName="SALES" columnName="TID"/>
+    </attribute>
+    <attribute id="CUSTOMER_ID" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CUSTOMER_ID"/>
+      <keyMapping columnObjectName="SALES" columnName="CUSTOMER_ID"/>
+    </attribute>
+    <attribute id="MATERIAL_ID" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATERIAL_ID"/>
+      <keyMapping columnObjectName="SALES" columnName="MATERIAL_ID"/>
+    </attribute>
+    <attribute id="UNIT" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UNIT"/>
+      <keyMapping columnObjectName="SALES" columnName="UNIT"/>
+    </attribute>
+    <attribute id="CURRENCY" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CURRENCY"/>
+      <keyMapping columnObjectName="SALES" columnName="CURRENCY"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="QTY" order="4" semanticType="quantity" aggregationType="sum" measureType="quantity">
+      <descriptions defaultDescription="QTY"/>
+      <unitCurrencyAttribute attributeName="UNIT"/>
+      <measureMapping columnObjectName="SALES" columnName="QTY"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="AMOUNT" order="5" semanticType="amount" aggregationType="sum" measureType="amount">
+      <descriptions defaultDescription="AMOUNT"/>
+      <unitCurrencyAttribute attributeName="CURRENCY"/>
+      <measureMapping columnObjectName="SALES" columnName="AMOUNT"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
