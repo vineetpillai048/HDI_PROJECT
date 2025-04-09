@@ -1,0 +1,9 @@
+{
+    "role": {
+      "name": "HC_ESAC_PROJ.db.Roles::CC_EXTERNAL_ACCESS#",
+       "schema_privileges": [{
+                    "privileges_with_grant_option": ["SELECT METADATA", "SELECT CDS METADATA", "SELECT", "INSERT", "UPDATE", "EXECUTE", "DELETE", "CREATE TEMPORARY TABLE" ]
+                 }]
+    }
+  }
+  

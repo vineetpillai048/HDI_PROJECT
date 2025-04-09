@@ -1,0 +1,9 @@
+{
+    "role": {
+      "name": "HC_ESAC_PROJ.db.Roles::CC_EXTERNAL_ACCESS",
+       "schema_privileges": [{
+                    "privileges": ["SELECT", "EXECUTE"]
+                 }]
+    }
+  }
+  
